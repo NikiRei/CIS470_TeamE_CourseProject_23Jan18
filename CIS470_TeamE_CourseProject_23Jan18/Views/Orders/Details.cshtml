@@ -1,0 +1,66 @@
+﻿@model CIS470_TeamE_CourseProject_23Jan18.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.jobType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.mediaType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mediaType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.mediaCatalogNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mediaCatalogNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.designRequest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.designRequest)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orderStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orderStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.insertedDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.insertedDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.lastUpdated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.lastUpdated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.lastUpdatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.lastUpdatedBy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.orderID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

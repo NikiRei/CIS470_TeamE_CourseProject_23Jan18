@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CIS470_TeamE_CourseProject_23Jan18.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.jobType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.mediaType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.mediaCatalogNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.designRequest)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orderStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.insertedDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.lastUpdated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.lastUpdatedBy)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.jobType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mediaType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mediaCatalogNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.designRequest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.insertedDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastUpdatedBy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.orderID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.orderID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.orderID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
